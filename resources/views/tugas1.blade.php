@@ -1,3 +1,6 @@
+@extends('layout.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +74,9 @@
             <div id="leaflet-map" class="map"></div>
         </div>
     </div>
+    @endsection
 
+    @section('script')
     <script>
         // Peta menggunakan Leaflet.js
         const leafletMap = L.map('leaflet-map').setView([-8.7984047, 115.1698715], 10);
@@ -131,3 +136,4 @@
     </script>
 </body>
 </html>
+@endsection

@@ -1,3 +1,5 @@
+@extends('layout.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +36,9 @@
 
     <!-- Peta menggunakan Google Maps -->
     <div id="google-map"></div>
+@endsection
 
+@section('script')
     <script>
         // Peta menggunakan Leaflet.js
         const leafletMap = L.map('leaflet-map').setView([-8.6509, 115.2194], 10);
@@ -88,3 +92,4 @@
     </script>
 </body>
 </html>
+@endsection

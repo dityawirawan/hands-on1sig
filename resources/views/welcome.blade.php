@@ -1,3 +1,6 @@
+@extends('layout.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,8 +90,9 @@
             <a href="/tugas1" class="btn btn-custom">Tugas 1</a>
             <a href="/latihan2" class="btn btn-custom">Latihan 2</a>
             <a href="/tugas2" class="btn btn-custom">Tugas 2</a>
-            <a href="/tugas3" class="btn btn-custom">Tugas 3</a>
+            <a href="/handson3" class="btn btn-custom">Tugas 3</a>
         </div>
     </div>
 </body>
 </html>
+@endsection

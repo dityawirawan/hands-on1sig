@@ -6,6 +6,8 @@ use App\Http\Controllers\Tugas1Controller;
 
 use App\Http\Controllers\MapDataController;
 
+use App\Http\Controllers\PetaCRUDController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +45,24 @@ Route::delete('/api/markers/{id}', [MapDataController::class, 'deleteMarker']);
 Route::delete('/api/polygons/{id}', [MapDataController::class, 'deletePolygon']);
 Route::get('/api/markers/{id}', [MapDataController::class, 'viewMarker']);
 Route::get('/api/polygons/{id}', [MapDataController::class, 'viewPolygon']);
+
+
+Route::get('/handson3', [PetaCRUDController::class, 'index'])->name('handson3.index');
+
+
+Route::get('/listDataMarker', [PetaCRUDController::class, 'getListMarker'])->name('handson3.getListMarker');
+Route::get('/listDataPolygon', [PetaCRUDController::class, 'getListPolygon'])->name('handson3.getListPolygon');
+Route::post('/storeMarker', [PetaCRUDController::class, 'index'])->name('handson3.storeMarker');
+Route::post('/storePolygon', [PetaCRUDController::class, 'index'])->name('handson3.storePolygon');
+
+
+/*HANDS-ON 4 : */
+Route::get('/handson4/viewmaps/{id}', [PetaCRUDController::class, 'viewmaps'])->name('handson4.viewmaps');
+Route::get('/handson4/viewleaflet/{id}', [PetaCRUDController::class, 'viewleaflet'])->name('handson4.viewleaflet');
+Route::get('/handson4/{id}/edit', [PetaCRUDController::class, 'edit'])->name('handson4.edit');
+Route::put('/updateMarker', [PetaCRUDController::class, 'updateMarker'])->name('handson4.updateMarker');
+
+
 
 
 
